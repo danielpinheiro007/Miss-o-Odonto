@@ -1,60 +1,110 @@
-
+/* Fundo azul claro com padrão odontológico */
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f0f8ff;
-  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #9EEDFC;
+  background-image: url('https://www.transparenttextures.com/patterns/white-dental.png'); /* Exemplo de padrão dentário */
+  background-repeat: repeat;
+  background-size: 100px 100px;
   margin: 0;
   padding: 20px;
+  color: #004d66;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
 }
 
+/* Container centralizado com fundo branco transparente */
 .container {
-  max-width: 700px;
-  margin: auto;
-  background: #fff;
-  border-radius: 10px;
-  padding: 30px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  max-width: 650px;
+  width: 90%;
+  padding: 30px 40px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-h1, h2 {
+/* Título principal */
+h1 {
+  font-weight: 700;
+  font-size: 2.8rem;
   text-align: center;
+  margin-bottom: 30px;
+  color: #0277bd; /* Azul escuro */
 }
 
-#question-box {
-  margin-top: 20px;
+/* Perguntas */
+#quiz p {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 
-button {
-  background-color: #0077cc;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  font-size: 16px;
+/* Opções */
+label {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
   cursor: pointer;
-  margin-top: 15px;
-  border-radius: 5px;
+  user-select: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
 
-button:hover {
-  background-color: #005fa3;
+/* Quando passa o mouse */
+label:hover {
+  background-color: #81d4fa;
 }
 
-.hidden {
+/* Inputs escondidos para customizar */
+input[type="radio"] {
   display: none;
 }
 
-.answer {
-  background-color: #e7e7e7;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 10px 0;
+/* Estilo para opção selecionada */
+input[type="radio"]:checked + label {
+  background-color: #0288d1;
+  color: white;
+  font-weight: 700;
+}
+
+/* Botão Próxima */
+button#next {
+  background-color: #0288d1;
+  color: white;
+  font-size: 1.15rem;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  display: block;
+  width: 100%;
 }
 
-.answer.correct {
-  background-color: #a4e6a6;
+button#next:hover {
+  background-color: #015f8b;
 }
 
-.answer.incorrect {
-  background-color: #f6b0ac;
+/* Formulário enviar respostas */
+form#respostasForm {
+  margin-top: 25px;
+  text-align: center;
+}
+
+form#respostasForm button[type="submit"] {
+  background-color: #0277bd;
+  color: white;
+  font-size: 1.15rem;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form#respostasForm button[type="submit"]:hover {
+  background-color: #014f6c;
 }
